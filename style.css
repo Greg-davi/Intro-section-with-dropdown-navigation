@@ -1,0 +1,314 @@
+:root{
+    --Almost-White: hsl(0, 0%, 98%);
+    --Medium-Gray: hsl(0, 0%, 41%);
+    --Almost-Black: hsl(0, 0%, 8%);
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 0;
+}
+.burger{
+    display: none;
+}
+.nav{
+    display: flex;
+}
+
+.nav .links button{
+    border: none;
+    background-color: white;
+}
+.nav .links a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav .links{
+    display: flex;
+}
+
+.mobile-container{
+    display: none;
+}
+
+.dropbtn {    
+    color: black;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+.feature-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 1rem 2rem 0rem 3rem;
+}  
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.feature .show {
+    display:block;
+}
+
+
+.feature-dropdown ul .todo{
+    list-style-image: url(./images/icon-todo.svg);
+}
+
+.feature-dropdown ul .calendar{
+    list-style-image: url(./images/icon-calendar.svg);
+}
+.feature-dropdown ul .reminder{
+    list-style-image: url(./images/icon-reminders.svg);
+}
+.feature-dropdown ul .planning{
+    list-style-image: url(./images/icon-planning.svg);
+}
+
+
+/* Company Option */
+.company-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    padding: 1rem;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+} 
+
+.company .show {
+    display:block;
+}
+
+.company-dropdown ul li{
+    list-style-type: none;
+}
+
+
+
+nav .log{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+nav .log a{
+    text-decoration: none;
+    color: black;
+    margin-right: 1rem;    
+}
+
+nav .log a:last-child{    
+    border: 1px solid black;
+    padding: 0.3rem 1rem;    
+    border-radius: 0.7rem;
+}
+
+.main{
+    display: flex;
+}
+
+.left{
+    margin-top: 10rem;
+}
+
+.left h2{
+    font-size: 4rem;
+    font-weight: bolder;
+}
+
+.left p{
+    font-size: 1rem;
+}
+
+.left button{
+    border: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 0.7rem;
+    background-color: black;
+    color: white;
+    font-weight: bolder;
+}
+.connect{
+    margin-top: 3rem;
+}
+.connect img{
+    margin-right: 1rem;
+    
+}
+.right{
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    background-image: url(./images/image-hero-desktop.png);
+    background-size: cover;
+}
+
+
+
+@media screen and (max-width: 500px) {
+    .nav .links{
+        display: none;
+    }
+    .nav .log{
+        display: none;
+    }
+   
+    .burger{
+        display: block;
+    }
+    .burger button{
+        border: none;
+        background-color: white;
+    }
+
+    .mobile{
+        width: 100%;
+        height: 100vh;
+        background-color: black;
+        opacity: 0.5;
+        position: absolute;
+        z-index: 3;
+        margin-top: -5rem;
+    }
+
+    .mobile-container{
+        display: none;
+    }
+
+    .show{
+        display: block;
+    }
+
+    .mobile-contain{        
+        display: flex;
+        justify-content: end;
+    }
+    .mobile-nav{
+        width: 50%;
+        background-color: white;
+        height: 100vh;
+        position: absolute;
+        z-index: 4;
+        margin-top: -5rem;
+        padding: 2rem 2rem;
+    }
+
+    .mobile-nav button{
+        background-color: white;
+        border: none;
+        margin-bottom: 1rem;
+    }
+
+    .mobile-nav #close-btn{
+        float: right;
+    }
+
+    .mobile-nav .links{
+        margin-top: 5rem;
+    }
+    .mobile-nav .con a{
+        text-decoration: none;
+        color: black;
+        margin-top: 1rem;
+    }
+    .mobile-nav .con{
+        display: flex;
+        flex-direction: column;
+    }
+   
+    .mobile-nav .log a{
+        text-decoration: none;
+        color: black;
+        margin-top: 1rem;
+        padding: 1rem 3rem;
+        
+    }
+    .feature-dropdown .mobile-feature{
+        display: none;
+    }
+    .mobile-nav .log a:last-child{
+        border: 1px solid black;
+        border-radius: 1rem;
+    }
+    .mobile-nav .log{
+        display: flex;
+        flex-direction: column;
+    }
+    .main{
+        display: flex;
+        flex-direction: column-reverse;
+        
+    }
+    
+    .main .right{
+        width: 100%;
+        height: 50vh;   
+        background-image: url(./images/image-hero-mobile.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-bottom: -5rem;
+    }
+
+    .left{
+        margin-top: 0rem;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .left h2{
+        font-size: 2rem;
+        font-weight: bolder;
+    }
+    
+    .left p{
+        font-size: 1rem;
+    }
+    
+    .left button{
+        border: none;
+        padding: 0.7rem 1.2rem;
+        border-radius: 0.7rem;
+        background-color: black;
+        color: white;
+        font-weight: bolder;
+        width: 50%;
+    }
+    .connect{
+        margin-top: 2rem;
+    }
+    .connect img{
+        margin-right: 1rem;
+        height: 1.2rem;
+        
+    }
+    
+}
+
+
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    margin-top: 1rem; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
