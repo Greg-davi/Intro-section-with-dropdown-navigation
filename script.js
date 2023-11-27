@@ -58,9 +58,49 @@ document.getElementById('burger').addEventListener('click', function(){
 document.getElementById('close-btn').addEventListener('click', function(){
   mobile.classList.remove('show');
 })
+
+
+
+
+
+// Mobile JS
+function myMobileFunction() {
+  document.getElementById("mobile-feature").classList.toggle("shower");
   
-document.getElementById('feature').addEventListener('click', function(){
-  console.log('help')
-})
+}
+  
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('#company')) {
+    var dropdowns = document.getElementById('mobile-feature');
+    
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];        
+      if (openDropdown.classList.contains('shower')) {
+        openDropdown.classList.remove('shower');          
+      }
+    }
+  }
+}
 
 
+function myCompanyFunction() {
+  document.getElementById("mobile-company").classList.toggle("shower");
+  
+}
+  
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('#company')) {
+    var dropdowns = document.getElementById('mobile-company');
+    
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];        
+      if (openDropdown.classList.contains('shower')) {
+        openDropdown.classList.remove('shower');          
+      }
+    }
+  }
+}
